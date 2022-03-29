@@ -36,7 +36,7 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: artefact-1
+          name: artefact-ubuntu
           path: ./demo_printd
   build-win:
     # The type of runner that the job will run on
@@ -60,5 +60,5 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: artefact-1
+          name: artefact-win
           path: ./demo_printd
