@@ -30,7 +30,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run demo_printd
-        run: ./demo_printd
+        run: demo_printd
         
       # Runs a set of commands to make an artifact
       - name: Archive production artifacts
