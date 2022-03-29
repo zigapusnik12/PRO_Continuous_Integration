@@ -27,6 +27,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Compile code with make
         run: make all
+        
+      # Runs a single command using the runners shell
+      - name: Look files
+        run: ls -l
 
       # Runs a single command using the runners shell
       - name: Run demo_printd
@@ -34,7 +38,7 @@ jobs:
         
       # Runs a set of commands to make an artifact
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: artefact-ubuntu
           path: ./demo_printd
@@ -51,17 +55,18 @@ jobs:
       # Runs a single command using the runners shell
       - name: Compile code with make
         run: make all
-
+       
+     # Runs a single command using the runners shell
+      - name: Look files
+        run: dir
+        
       # Runs a single command using the runners shell
       - name: Run demo_printd
         run: ./demo_printd
         
-      - name: Look files
-        run: dir
-        
       # Runs a set of commands to make an artifact
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: artefact-win
-          path: demo_printd
+          path: ./demo_printd.exe
